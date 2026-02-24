@@ -1,0 +1,46 @@
+[
+  {
+    "bookSourceGroup": "自定义定制",
+    "bookSourceName": "酷星小说网",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://www.kuxingyy.com",
+    "customOrder": 0,
+    "enabled": true,
+    "enabledCookieJar": false,
+    "enabledExplore": false,
+    "lastUpdateTime": 1708761600000,
+    "ruleBookInfo": {
+      "author": "[property=\"og:novel:author\"]@content || h1@text##.*作者：",
+      "coverUrl": "[property=\"og:image\"]@content",
+      "intro": "[property=\"og:description\"]@content || .intro@text",
+      "kind": "[property=\"og:novel:category\"]@content || [property=\"og:novel:status\"]@content",
+      "lastChapter": "[property=\"og:novel:latest_chapter_name\"]@content",
+      "name": "[property=\"og:novel:book_name\"]@content || [property=\"og:title\"]@content",
+      "wordCount": "[property=\"og:novel:word_count\"]@content || [property=\"og:novel:update_time\"]@content"
+    },
+    "ruleContent": {
+      "content": "#content@html || #chaptercontent@html || #BookText@html",
+      "nextContentUrl": "text.下一页@href || text.下一章@href",
+      "replaceRegex": "##本站所有小说均由根据搜索引擎.*展示。|[′￠¨*+·!~\\-?÷%<>{}()\\[\\]`_^a-zA-Z0-9,\\.\\s]*(看\\/?书|免\\.?费|阅[·\\.]?读|c\\-o[~′]?m|小[·\\.]?说[·\\.]?网|更[\\/\\.]?新|最[\\,\\.]?快|看\\??\\s*书|已[¨￠]?发\\>?布|最[e@]?[新快]|章[×\\.]?节|l￠o·o′k)[′￠¨*+·!~\\-?÷%<>{}()\\[\\]`_^a-zA-Z0-9,\\.\\s]*"
+    },
+    "ruleExplore": {},
+    "ruleSearch": {
+      "author": "a.2@text || .author@text || .s4@text",
+      "bookList": ".novelslist2 li!0 || .item || .result-item || #sitembox dl",
+      "bookUrl": "a.1@href || .title a@href || h3 a@href || dt a@href",
+      "coverUrl": "img@src",
+      "intro": ".intro@text || dd.2@text",
+      "kind": ".s1@text || .cat@text",
+      "lastChapter": "a.3@text || .update@text || .sys@text",
+      "name": "a.1@text || .title@text || h3@text"
+    },
+    "ruleToc": {
+      "chapterList": "#list dd || .dirlist li || .chapterlist dd || .volume-list li",
+      "chapterName": "a@text",
+      "chapterUrl": "a@href",
+      "nextTocUrl": "text.下一页@href"
+    },
+    "searchUrl": "/search.php?keyword={{key}}",
+    "weight": 0
+  }
+]
